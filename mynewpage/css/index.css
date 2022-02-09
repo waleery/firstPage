@@ -103,4 +103,20 @@ section.hero .down-arrow {
 section.hero .down-arrow path {
   fill: white;
 }
+
+.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 11em;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.more-info .desc {
+  line-height: 1.5rem;
+}
 /*# sourceMappingURL=index.css.map */
