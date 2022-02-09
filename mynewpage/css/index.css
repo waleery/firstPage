@@ -27,7 +27,40 @@ a {
 }
 
 nav {
-  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: uppercase;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transform: transform .5s ease-in-out;
+          transform: transform .5s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8em;
+}
+
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+
+nav ul a:hover {
+  background: #f1f1f1;
+}
+
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
 }
 
 header {
