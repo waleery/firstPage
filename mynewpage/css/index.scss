@@ -19,7 +19,9 @@ a {
     background-position-y: 20%;
     width: 100%;
     height: 100vh;
-    z-index: -1;  //behind 
+    z-index: -1;  //behind
+    animation: introLoad 2s forwards;
+    
     //overflow: hidden;
 
 }
@@ -88,12 +90,15 @@ h1{
 section.hero{
     color: white;
     height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
     
     .down-arrow{
         stroke: white;
         position: absolute;
         bottom: 2em;
         width: 1em;
+        animation: moveArrov 1s alternate-reverse infinite;
 
         path{
             fill:white;
@@ -228,5 +233,33 @@ section.hero{
 
     .feature{
         gap: 0;
+    }
+}
+
+@keyframes introLoad{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+}
+@keyframes moveArrov{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
     }
 }
