@@ -40,9 +40,8 @@ nav{
     width: 50%;
     z-index: 999;
     text-transform: uppercase;
-
     transform: translateX(100%);
-    transform: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
     ul{
         list-style: none;
         padding: 0;
@@ -71,7 +70,7 @@ header{
     justify-content: space-between;
 
     svg{
-        width: 3em;
+        width: 2.3em;
         margin-top: -.6em;
         cursor: pointer;
     }
@@ -96,6 +95,7 @@ section.hero{
     .down-arrow{
         stroke: white;
         position: absolute;
+        margin-top: 1em;
         bottom: 2em;
         width: 1em;
         animation: moveArrov 1s alternate-reverse infinite;
@@ -121,6 +121,9 @@ section.hero{
     .desc{
         line-height: 1.5rem;
     }
+}
+.open-nav{
+    transform: translateX(0%);
 }
 
 @media only screen and (min-width: 680px){

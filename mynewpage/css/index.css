@@ -39,8 +39,10 @@ nav {
   text-transform: uppercase;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transform: transform .5s ease-in-out;
-          transform: transform .5s ease-in-out;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
 
 nav ul {
@@ -75,7 +77,7 @@ header {
 }
 
 header svg {
-  width: 3em;
+  width: 2.3em;
   margin-top: -.6em;
   cursor: pointer;
 }
@@ -101,6 +103,7 @@ section.hero {
 section.hero .down-arrow {
   stroke: white;
   position: absolute;
+  margin-top: 1em;
   bottom: 2em;
   width: 1em;
   animation: moveArrov 1s alternate-reverse infinite;
@@ -124,6 +127,11 @@ section.hero .down-arrow path {
 
 .more-info .desc {
   line-height: 1.5rem;
+}
+
+.open-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @media only screen and (min-width: 680px) {
